@@ -5,10 +5,10 @@ Program Code:
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# Load dataset
+
 data = pd.read_csv('payments.csv')
 
-# Convert date column to datetime
+
 data['date'] = pd.to_datetime(data['date'])
 
 
@@ -28,7 +28,7 @@ print("\nDaily Amount Spent:\n", daily_amount)
 print("\nPayment Method Usage:\n", method_usage)
 print("\nAverage Amount per Method:\n", avg_amount_method)
 
-# Plot daily transaction trend
+
 plt.figure()
 daily_transactions.plot()
 plt.title('Daily Transaction Count')
@@ -36,7 +36,7 @@ plt.xlabel('Date')
 plt.ylabel('Number of Transactions')
 plt.show()
 
-# Plot daily amount trend
+
 plt.figure()
 daily_amount.plot()
 plt.title('Daily Transaction Amount')
@@ -44,7 +44,7 @@ plt.xlabel('Date')
 plt.ylabel('Total Amount')
 plt.show()
 
-# Plot method usage
+
 plt.figure()
 method_usage.plot(kind='bar')
 plt.title('Payment Method Usage')
