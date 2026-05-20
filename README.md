@@ -11,16 +11,16 @@ data = pd.read_csv('payments.csv')
 # Convert date column to datetime
 data['date'] = pd.to_datetime(data['date'])
 
-# 1. Total transactions per day
+
 daily_transactions = data.groupby('date').size()
 
-# 2. Total amount spent per day
+
 daily_amount = data.groupby('date')['amount'].sum()
 
-# 3. Payment method usage count
+
 method_usage = data['method'].value_counts()
 
-# 4. Average transaction amount per method
+
 avg_amount_method = data.groupby('method')['amount'].mean()
 
 print("Daily Transactions:\n", daily_transactions)
